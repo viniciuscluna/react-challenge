@@ -5,13 +5,14 @@ import { RootState } from "../../app/store";
 //import type { RootState } from "../../app/store";
 
 // Define a type for the slice state
-
+const initialFirstName = 'Breaking';
+const initialLastName = 'Bad';
 // Define the initial state using that type
 const initialState: FormState = {
-  firstName: "",
-  firstNameProcessed: [],
-  lastName: "",
-  lastNameProcessed: [],
+  firstName: initialFirstName,
+  firstNameProcessed: ConvertToLetterMatch(initialFirstName),
+  lastName: initialLastName,
+  lastNameProcessed: ConvertToLetterMatch(initialLastName),
 };
 
 
@@ -33,6 +34,9 @@ export const formSlice = createSlice({
 
 export const firstNameProcessed = (state: RootState) => state.form.firstNameProcessed;
 export const lastNameProcessed = (state: RootState) => state.form.lastNameProcessed;
+
+export const firstName= (state: RootState) => state.form.firstName;
+export const lastName = (state: RootState) => state.form.lastName
 
 export const { setForm } = formSlice.actions;
 

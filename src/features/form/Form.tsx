@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 
-import { useAppDispatch } from "../../app/hooks";
-import { setForm } from "./formSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { setForm, firstName, lastName } from "./formSlice";
 import Input from "../../components/Input";
 
 import styles from "./Form.module.css";
@@ -13,10 +13,12 @@ type FormValues = {
 
 const Form = () => {
   const dispatch = useAppDispatch();
+  const firstNameSelector = useAppSelector(firstName);
+  const lastNameSelector = useAppSelector(lastName);
   const { control, handleSubmit } = useForm<FormValues>({
     defaultValues: {
-      firstName: "Breaking",
-      lastName: "Bad",
+      firstName: firstNameSelector,
+      lastName: lastNameSelector,
     },
   });
 
