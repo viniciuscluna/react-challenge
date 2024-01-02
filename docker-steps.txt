@@ -1,0 +1,6 @@
+Build Image
+docker build -t viniciuscluna/react-challenge . 
+Tag Image with dockerHub
+docker tag viniciuscluna/react-challenge:latest viniciuscluna/react-challenge:latest
+Push tag
+docker push viniciuscluna/react-challenge:latest
