@@ -1,0 +1,18 @@
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+
+    label {
+        font-weight: bolder;
+    }
+
+    input {
+        background-color: #B3B3B3;
+        border: 0;
+        border-radius: .2em;
+        height: 1.5rem;
+        color: black;
+    }
+}
