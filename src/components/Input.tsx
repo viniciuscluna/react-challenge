@@ -18,7 +18,7 @@ const Input = ({ name, label, control }: InputProps) => {
   return (
     <p className={styles.paragraph}>
       <label htmlFor={name}>{label}</label>
-      <input {...field} name={name}/>
+      <input {...field} name={name} placeholder={label} />
     </p>
   );
 };

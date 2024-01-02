@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setForm, firstName, lastName } from "./formSlice";
 import Input from "../../components/Input";
 
-import styles from "./Form.module.css";
+import styles from "./Form.module.scss";
 
 type FormValues = {
   firstName: string;

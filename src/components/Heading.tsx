@@ -7,16 +7,16 @@ type HeadingProps = {
   word: LetterMatch[];
 };
 const Heading = ({ word }: HeadingProps) => (
-  <div>
+  <h1 className={styles.heading}>
     {word.map((char) => (
-      <h1
-        className={classnames(styles.heading, {
+      <span
+        className={classnames({
           [styles.hightlight]: char.isInPeriodicTable,
         })}
       >
         {char.char}
-      </h1>
+      </span>
     ))}
-  </div>
+  </h1>
 );
 export default Heading;
